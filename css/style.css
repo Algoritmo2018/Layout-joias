@@ -1,0 +1,752 @@
+html, body{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Animações scroll*/
+
+[data-anima]{
+    opacity: 0;
+    transition: .8s;
+}
+
+[data-anima="esquerda"]{
+transform: translate3d(-50px,0,0);/*x y z*/
+}
+
+[data-anima="direita"]{
+    transform: translate3d(50px,0,0);/*x y z*/
+    }
+
+    [data-anima="centro"]{
+        transform: translate3d(0,50px,0);/*x y z*/
+        }
+
+        [data-anima].animacao{
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+/*fim*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+
+    flex-wrap: wrap;
+}
+
+ul, .subnav, .item_s1 a, .item4_joialeft {
+    font-family: sans-serif;
+}
+
+ul, nav ul li a, .subnav a {
+    color: #858585;
+}
+
+li {
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #2c2c2c;
+}
+
+.icone {
+    border: 1px solid #b6b5b5;
+}
+
+.subnav, .subnav div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subnav div {
+
+    flex-grow: 1;
+    padding: 0 20px;
+    padding-bottom: 5px;
+}
+
+.div_sub1 {
+    max-width: 252px;
+}
+
+.div_sub2 {
+    padding: 0px;
+    min-width: 120px;
+    max-width: 160px;
+}
+
+.subnav a:hover {
+    color: #414141;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width:500px) {
+    .logo {
+        padding-right: 500px;
+    }
+
+}
+
+@media (max-width:991px) {
+    .subnav a, nav ul li a {
+        color: #4e4c4c;
+    }
+}
+
+/*s1 flexbox*/
+.s1 {
+    padding-top: 20px;
+    display: flex;
+}
+
+@media screen and (max-width:655px) {
+    .s1 {
+        flex-direction: column;
+    }
+}
+
+/*Imagem de mãos de noivos*/
+.div_noivos {
+    position: relative;
+    display: inline-block;
+
+    width: 65%;
+    height: 400px;
+}
+
+.div_noivos img {
+    width: 100%;
+    height: 400px;
+}
+
+.item_s1 {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    color: rgb(250, 246, 246);
+}
+
+.noivos {
+    filter: brightness(95%);
+}
+
+
+.t1_s1 {
+    font-size: 15px;
+}
+
+.t2_s1 {
+    font-size: 30px;
+}
+
+.item_s1 span {
+    display: block;
+}
+
+.link_s1 {
+    color: rgb(250, 246, 246);
+    border: 1px solid #b6b5b5;
+    padding: 10px;
+    font-size: 7px;
+}
+
+.link_s1:hover {
+    color: black;
+    background-color: rgb(250, 246, 246);
+}
+
+@media screen and (max-width:1000px) {
+    .item_s1 {
+        top: 20%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width:655px) {
+    .div_noivos {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .t1_s1 {
+        font-size: 15px;
+    }
+
+    .t2_s1 {
+        font-size: 30px;
+    }
+
+    .link_s1 {
+
+        font-size: 4px;
+    }
+}
+
+/* fim da config. mãos de noivos*/
+
+/* Inicio da joia left*/
+
+.div_joialeft {
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    height: 400px;
+}
+
+@media screen and (max-width:655px) {
+    .div_joialeft {
+        width: 100%;
+    }
+
+}
+
+.div_joialeft img {
+    width: 100%;
+    height: 400px;
+    filter: brightness(95%);
+}
+
+.item_joialeft span {
+    display: block;
+}
+
+.item_joialeft {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    filter: brightness(85%);
+    text-align: left;
+}
+
+.item1_joialeft, .item3_joialeft {
+    font-size: 12.5px;
+}
+
+.item2_joialeft {
+    font-size: 27.5px;
+}
+
+.item4_joialeft {
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+.item5_joialeft {
+    color: rgb(77, 77, 77);
+    border: 1px solid #b6b5b5;
+    padding: 7px;
+
+    font-size: 7px;
+}
+
+.item5_joialeft:hover {
+    background-color: rgb(77, 77, 77);
+    color: white;
+}
+
+/* Fim da joia left*/
+
+
+/* Inicio tres joias*/
+.s2 {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+}
+
+.div_shop {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.5px solid #eeeeee;
+    align-items: center;
+    flex: 1;
+    height: 400px;
+    color: #807e7e;
+}
+
+.div_shop div {
+    padding: 10px;
+
+}
+
+.div_shop div:hover {
+    background-color: #e2e2e2;
+    cursor: pointer;
+}
+
+.txt1_s2 {
+    font-size: 32px;
+    color: #464646;
+    border-bottom: 1px solid #8a8a8a;
+    padding-bottom: 15px;
+}
+
+.div_shop span {
+    font-size: 18px;
+}
+
+
+
+.div_most {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+    height: 400px;
+}
+
+.legenda_most {
+    text-align: center;
+    position: absolute;
+    top: 4%;
+    width: 100%;
+}
+
+@media screen and (min-width:331px) and (max-width:655px) {
+
+
+    .txt1_s2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:655px) {
+    .s2 {
+        flex-direction: column;
+    }
+
+    .div_shop, .div_most, .div_wedding {
+        width: 100%;
+        color: #272727;
+    }
+
+    .div_shop {
+        padding-bottom: 10px;
+    }
+
+    .div_shop span {
+        font-size: 15px;
+    }
+
+    .div_wedding {
+        margin-top: -4px;
+
+    }
+
+}
+
+@media screen and (max-width:270px) {
+
+    .txt1_s2 {
+        font-size: 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+}
+
+.img_joia_center {
+    width: 100%;
+    height: 400px;
+    filter: brightness(95%);
+}
+
+.h1_joia_center {
+    font-size: 32px;
+    margin-bottom: 2px;
+    color: #464646;
+}
+
+
+.div_wedding {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+    height: 400px;
+}
+
+.img_joia_right {
+    width: 100%;
+    height: 400px;
+}
+
+@media screen and (max-width:330px) {
+    .h1_joia_center, .div_shop h1 {
+        font-size: 1em;
+    }
+
+    .div_shop span {
+        font-size: 0.8em;
+    }
+
+}
+
+/*fim s2*/
+
+.Latest {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+/*Inicio da secção 3*/
+.s3 {
+    display: flex;
+    flex-direction: row;
+    width: 97%;
+    margin: 5px 20px;
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+.div_img_s3 {
+    flex: 1;
+}
+
+.div_img_s3 img {
+    width: 100%;
+}
+
+.legenda_s3, .legenda2_s3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (max-width:655px) {
+    .s3 {
+        padding: 0px;
+        width: 100%;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+}
+
+.s3, .span1_div3_s4, .span1_div2_s4 {
+    color: #464646;
+}
+
+/*inicio s4*/
+.s4 {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0px 20px;
+}
+
+.s4 div {
+    width: 100%;
+    height: 400px;
+}
+
+.div1_s4 {
+    display: inline-block;
+    position: relative;
+    grid-column: 1/ span 2;
+}
+
+.s4 img {
+    width: 100%;
+    height: 400px;
+}
+
+@media screen and (max-width:655px) {
+    .s4 {
+
+
+        grid-template-columns: auto;
+    }
+
+    .div1_s4 {
+        position: relative;
+        grid-column: 1/ span 1;
+    }
+}
+
+.span1_div1_s4 {
+    font-size: 20px;
+}
+
+.legenda_s4 {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+
+}
+
+.div1_s4 span {
+    color: rgb(245, 242, 242);
+}
+
+.legenda_s4 span {
+    display: block;
+}
+
+.span2_div1_s4 {
+    font-size: 32px;
+}
+
+.span3_div1_s4 {
+    font-size: 10px;
+}
+
+.div2_s4, .div3_s4 {
+    display: inline-block;
+    position: relative;
+}
+
+.legenda_div2_s4, .legenda_div3_s4 {
+    position: absolute;
+    display: flex;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    align-items: flex-end;
+    justify-content: center;
+    bottom: 20px;
+}
+
+@media screen and (max-width:655px) {
+    .legenda_div2_s4, .legenda_div3_s4, .span2_div1_s4, .Latest, .legenda_s3 span {
+        font-size: 16px;
+    }
+
+    .span1_div1_s4 {
+        font-size: 10px;
+    }
+
+    .s4 {
+        padding: 0px;
+    }
+
+    .div_img_s3 {
+
+        max-width: 100%;
+    }
+
+}
+
+/*Inicio footer*/
+
+.footer1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+   
+    border-top: 1px solid #a7a7a7;
+    margin-top: 50px;
+}
+
+.footer1 article {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.footer1 .article1, .footer1 .article2 {
+
+    border-right: 1px solid #a7a7a7;
+}
+
+article div {
+    color: #464646;
+    padding: 5px;
+}
+
+article div a {
+    color: #464646;
+}
+
+.god1_article1 {
+    margin-left: 10px;
+    padding-bottom: 0px;
+
+}
+
+.div1_article1 {
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.div2_article1, .div3_article1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.div2_article1 a, .div3_article1 a {
+    margin-bottom: 2px;
+}
+
+.div2_article1 a:hover, .div3_article1 a:hover {
+    color: #1f1f1f;
+}
+
+.main2_div2_article1 {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width:1364px) {
+    .footer1 {
+        justify-content: center;
+    }
+}
+
+.input_article2 {
+    height: 25px;
+    width: 250px;
+    padding-left: 10px;
+    border: 1px solid #1f1f1f;
+    border-right: 1px solid white;
+}
+
+.input_article2:focus {
+    outline: none;
+}
+
+.div2_article2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.a_article2 {
+    background: #ccc;
+    color: black;
+    font-size: 16px;
+    padding: 5px;
+    top: 1px;
+}
+
+.div3_article2 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.div3_article2 a {
+    margin-right: 10px;
+}
+
+.div2_article3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-bottom: 0px;
+}
+
+
+
+@media screen and (max-width:1201px) {
+    .footer1 .article1, .footer1 .article2 {
+        border: none;
+    }
+}
+
+.footer2 {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;
+    min-height: 130px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div1_footer2 {
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.div_voltar_ao_topo {
+    background-color: rgb(175, 175, 175);
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 2px;
+    cursor: pointer; 
+}
+
+.div_voltar_ao_topo i {
+    font-size: 30px;
+}
+
+
+.footer2 div img {
+    width: 12%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer_img {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    max-width: 310px;
+    height: 42px;
+}
+
+.syvision {
+    margin-right: 40px;
+}
+
+@media screen and (max-width:840px) {
+    .footer2 {
+ 
+        flex-direction:column;
+        max-height: 300px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer2 div{
+         
+        margin-bottom: 10px;
+    }
+
+    .div1_footer2{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width:330px) {
+    .footer_img {
+flex-wrap: wrap;
+  height: 50px;
+ 
+align-items: center;
+    }
+}
+
